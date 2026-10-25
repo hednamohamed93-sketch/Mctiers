@@ -1,0 +1,37 @@
+MCTIERS BOT — QUEUE + TIERS
+
+Installation
+1. Python 3.10 ou plus récent.
+2. Installer les dépendances : pip install -r requirements.txt
+3. Renommer .env.example en .env.
+4. Remplir DISCORD_BOT_TOKEN, TESTER_ROLE_ID et TICKET_CATEGORY_ID.
+5. Lancer : python bot.py
+
+Configuration
+- TESTER_ROLE_ID : rôle requis pour /tiers-set et /queue-add. La personne ajoutée avec /queue-add doit également avoir ce rôle.
+- TICKET_CATEGORY_ID : catégorie Discord où seront créés les tickets privés.
+- Ne partage jamais ton fichier .env ni ton token.
+
+Commandes
+- /queue setup : crée la queue dans le salon actuel et demande le nom du mode.
+- /queue stop : arrête la queue.
+- /queue join et bouton Join : rejoindre la queue.
+- /queue leave et bouton Leave : quitter la queue.
+- /queue list : afficher la liste d'attente.
+- /queue-add personne:@membre : ajoute un testeur ayant le rôle configuré à la section Active Testers.
+- /tiers-set : pseudo Minecraft, mode, puis tier obtenu.
+
+Queue et tickets
+- Style de queue inspiré de la capture : titre MCTiers + nom du mode, queue jusqu'à 20 joueurs, section Active Testers et boutons Join/Leave.
+- @here est ping lors de la création du panneau de queue et lors de la création d'un ticket, pas dans le résultat de tier.
+- Quand un joueur est premier, un ticket privé est créé dans la catégorie configurée.
+- Le nom du ticket contient mctiers, le mode et le pseudo.
+- Bouton pour fermer le ticket.
+
+Résultats de tier
+- Affiche le skin Minecraft, IGN, région EU, mode, Tier Before, Tier Earned et Tier Tester.
+- L'ancien tier est conservé par pseudo et par mode dans queue.db.
+- Ranks autorisés : HT1, LT1, HT2, LT2, HT3, LT3, HT4, LT4, HT5 et LT5.
+- Modes disponibles dont SpearMace : SpearMace, Sword, Axe, UHC, SMP, Crystal, Mace, NethPot, DiaPot, Pot, Vanilla, Bedrock et Other.
+
+Permissions du bot : Voir les salons, Envoyer des messages, Intégrer des liens, Gérer les salons et permission de mentionner @here (mention @everyone).
